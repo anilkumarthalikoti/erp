@@ -1,0 +1,41 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>ERP</title>
+
+<link rel="stylesheet" href="css/login.css" />
+
+<script type="text/javascript" src="js/app.js"></script>
+<script type="text/javascript" src="js/controller/login/login.js"></script>
+
+</head>
+<body ng-controller="LoginCtrl">
+<table height="100%" width="100%">
+<tr><td valign="center" align="center">
+<div class="login">
+<table >
+<tr>
+  <td colspan="3"  align="center" style="height:50px; "   >
+Login
+  <hr/></td></tr>
+<tr class="small"><td width="60" valign="bottom">Login Id</td>
+<td width="20">:</td>
+<td width="72"><input type="text" class="input" id='userId' ng-model="userId"/></td>
+</tr>
+<tr class="small"><td>Password</td><td>:</td><td><input type="password" id="password" class="input" ng-model="password"/></td></tr>
+<tr class="small"><td colspan="3" align="center"><input type="button"  class="button1" value="Login" ng-click="login()"/>
+&nbsp;  <input class="button1"  type="button" value="Reset"/></td>
+</tr>
+<tr>
+<td colspan="3" align="center"  >
+<hr/>
+<div id="errorMsg" class="hide"><span style="color:#FF0000">*Unable to create admin*</span></div> </td>
+</tr>
+</table>
+</div>
+
+</td></tr>
+</table>
+</body></html>
