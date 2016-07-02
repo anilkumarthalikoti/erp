@@ -1,5 +1,5 @@
 <?php 
-require '../../server/login/login.php';
+include '../../server/service/login/login.php';
 if(isset($_POST["action"])){
 
 }
