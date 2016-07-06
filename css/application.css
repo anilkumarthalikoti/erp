@@ -124,3 +124,61 @@
   border-bottom-style: solid;
   border-bottom-width: 2px;
 }
+.header{
+    
+    position:absolute;
+    top:0;
+    left:300px;
+    right:0;
+    height:0px; 
+      border:1px solid #eeeeee;
+}
+.studentsearch{
+   position:absolute;
+    top:0px;
+    left:300px;
+    right:5px;
+    height:30px;
+      border:1px solid #eeeeee;
+ 
+}
+.sidebar{
+    
+    width:295px; 
+     top:0px;
+     bottom:35px;
+     left:0px; 
+     border:1px solid #eeeeee;
+     position:absolute;
+ 
+}
+.userprofile{
+    height:100px;
+    border:1px solid #eeeeee;
+    
+    
+}
+.fotter{
+    width:100%;
+   bottom:0px; 
+   height:34px;
+    border:1px solid #eeeeee;
+   left:0px; 
+   position:absolute;
+}
+.viewport{
+    
+    position:absolute; 
+    
+    top:32px; 
+    bottom:35px; 
+    right:5px;
+    left: 300px; 
+    border:1px solid #eeeeee;
+}
+
+.glyphicon { margin-right:10px; }
+.panel-body { padding:0px; }
+.panel-body table tr td { padding-left: 15px }
+.panel-body .table {margin-bottom: 0px; }
+ 

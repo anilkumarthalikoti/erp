@@ -1,6 +1,6 @@
 define(['application-configuration', 'ajaxService'], function (app) {
 
-    app.register.service('userServices', ['ajaxService', function (ajaxService) {
+    app.register.service('userService', ['ajaxService', function (ajaxService) {
 
         this.registerUser = function (user, successFunction, errorFunction) {
             ajaxService.AjaxPostWithNoAuthenication(user, "/api/user/RegisterUser", successFunction, errorFunction);

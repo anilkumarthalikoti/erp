@@ -12,18 +12,7 @@
 
 </head>
 <body ng-controller="indexController" ng-init="initializeController()" style="height:100%;">
-
-    <div class="navbar navbar-inverse navbar-fixed-top">
-        <div class="container">
-            <div class="navbar-collapse collapse">
-                <ul class="nav navbar-nav" ng-repeat="menuItem in MenuItems | filter:{Module: 'Main'}">
-                    <li><a href="{{menuItem.Route}}">{{menuItem.Description}}</a></li>
-                </ul>
-            </div>
-        </div>
-    </div>
-   
-    <script language="JavaScript">
+   <script language="JavaScript">
 
         function set95PercentWidth() {            
             var viewPort = document.getElementById("ViewPort");
@@ -37,33 +26,68 @@
         }
 
     </script>
-
-    <div style="width: 100%; height: 100%; position: absolute; vertical-align: top; margin: 50px 0px 0px 0px">
-   
-        <button class="btn btn-default" style="width: 200px; background-color: antiquewhite; border:none;" ng-show="isCollapsed" onclick="set80PercentWidth()" ng-click="isCollapsed = !isCollapsed">Show Menu>></button>
-        <button class="btn btn-default" style="width: 200px; background-color: antiquewhite; border:none;" ng-show="!isCollapsed" onclick="set95PercentWidth()" ng-click="isCollapsed = !isCollapsed;"><< Hide Menu</button>
-        
-        <div style="width:100%">
-
-            <div collapse="isCollapsed" class="navbar" style="width: 200px; height:100%; vertical-align:top; margin-top:0px; margin-right:20px;background-color: antiquewhite; float:left">
-                <div style="height:1000px">
-                    <table class="table table-hover">
-                        <tr ng-repeat="menuItem in MenuItems | filter:{Module: applicationModule}">
-                            <td><a href="{{menuItem.Route}}">{{menuItem.Description}}</a></td>
-                        </tr>
-                    </table>
+  
+    <div class="header" ></div>
+    <div class="studentsearch" ></div>
+    <div class="sidebar"  >
+        <div class="userprofile">
+            User Details
+        </div>
+        <div ng-repeat="(key,value) in MenuItems">
+            {{key}}{{value}}
+        </div>
+         <div class="container menu" style="padding:0; margin: 0;">
+    <div class="row">
+        <div class="col-sm-3 col-md-3">
+            <div class="panel-group" id="accordion">
+                <div class="panel panel-default" ng-repeat="(key,value) in MenuItems">
+                    <!--Loop headers-->
+                    <div class="panel-heading" >
+                        <h4 class="panel-title">
+                            <a data-toggle="collapse" data-parent="#accordion" href="#collapseOne"><span class="glyphicon glyphicon-folder-close">
+                            </span>{{key}}</a>
+                        </h4>
+                    </div>
+                    <!-- loop sub links-->
+                    <div id="{{key}}}" class="panel-collapse collapse in" >
+                        <div class="panel-body">
+                            <table class="table" >
+                                <tr ng-repeat=" (key1,value1) in value">
+                                    <td>
+                                        <span class="glyphicon glyphicon-pencil text-primary"></span><a href="{{key1}}">{{value1}}</a>
+                                    </td>
+                                </tr>
+                                 
+                            </table>
+                        </div>
+                    </div>
                 </div>
-
+               
+                 
+                 
             </div>
+        </div>
+       
+    </div>
+</div>
 
-            <div id="ViewPort" style="vertical-align: top; float: left; width:80%; margin: 80px 80px 40px 40px" ng-view>             
+        <div>
+            
+            
+        </div>  
+        
+    </div>
+    <div class="fotter panel-footer"  ><span class="right">@copyright</span></div>
+ 
+
+            <div id="ViewPort" class="viewport" style="" ng-view>             
                <!-- <div style="margin: 0px 40px 40px 40px; background-color:red; float:left; display: inline-block;" ng-view></div>-->
             </div>
 
-        </div>
+ 
      
 
-    </div>
+ 
 
     <script language="JavaScript">
 

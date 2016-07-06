@@ -1,8 +1,8 @@
 "use strict";
-define(['application-configuration', 'userServices', 'alertsService'], function (app) {
+define(['application-configuration', 'userService', 'alertsService'], function (app) {
 
-    app.register.controller('loginController', ['$scope', '$rootScope', 'userServices', 'alertsService',
-        function ($scope, $rootScope, userServices, alertsService) {
+    app.register.controller('loginController', ['$scope', '$rootScope', 'userService', 'alertsService',
+        function ($scope, $rootScope, userService, alertsService) {
 
             $rootScope.closeAlert = alertsService.closeAlert;
             $rootScope.alerts = [];
@@ -19,7 +19,7 @@ define(['application-configuration', 'userServices', 'alertsService'], function 
             $scope.login = function () {
                 $rootScope.IsloggedIn = false;
                 var user = $scope.createLoginCredentials();
-                userServices.login(user, $scope.loginCompleted, $scope.loginError);
+                userService.login(user, $scope.loginCompleted, $scope.loginError);
                
             }
 
@@ -30,7 +30,7 @@ define(['application-configuration', 'userServices', 'alertsService'], function 
           }else{
               $rootScope.IsloggedIn=true;
               $rootScope.userDetails=data;
-              $rootScope.applicationModule="dashboard";    
+               
                 window.location = "applicationMasterPage.html#/dashboard/dashboard";
             }
             }

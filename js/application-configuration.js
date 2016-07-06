@@ -100,9 +100,9 @@ define(['angularAMD', 'angular-route', 'ui-bootstrap', 'angular-sanitize', 'bloc
 
 
     var indexController = function ($scope, $rootScope, $http, $location, blockUI) {
-             
+            
         $scope.$on('$routeChangeStart', function (scope, next, current) {
-             
+           
             if ($rootScope.IsloggedIn==true)
             {               
                 $scope.authenicateUser($location.path(),$scope.authenicateUserComplete, $scope.authenicateUserError);
@@ -124,7 +124,7 @@ define(['angularAMD', 'angular-route', 'ui-bootstrap', 'angular-sanitize', 'bloc
 
         $scope.initializeController = function () {
             $rootScope.displayContent = false;
-         
+       
             if ($location.path() != "")        
             {         
              
@@ -138,10 +138,30 @@ define(['angularAMD', 'angular-route', 'ui-bootstrap', 'angular-sanitize', 'bloc
             $rootScope.displayContent = true;
             $rootScope.IsloggedIn = true;          
         }
-
+        
+            $scope.menuLoad=function(){
+            $scope.AjaxGet("api/shared/menus.php?action=menu", function(successResponse){
+               $rootScope.MenuItems=successResponse;
+               console.log(successResponse);
+            }, function(errorResponse){
+                
+                
+            });
+            
+            }
+            
+            
+      
         $scope.initializeApplication = function (successFunction, errorFunction) {
             blockUI.start();           
-            $scope.AjaxGet("api/dashboard/dashboard.php", successFunction, errorFunction);
+           // $scope.AjaxGet("api/dashboard/dashboard.php", successFunction, errorFunction);
+            $scope.AjaxGet("api/shared/menu.php?action=menu", function(successResponse){
+               $rootScope.MenuItems=successResponse;
+               
+            }, function(errorResponse){
+                
+                
+            });
             blockUI.stop();
         };
               
