@@ -1,0 +1,17 @@
+   <div style="width: 100%; height: 100%; position: absolute; vertical-align: top; margin: 50px 0px 0px 0px">
+   
+        <button class="btn btn-default" style="width: 200px; background-color: antiquewhite; border:none;" ng-show="isCollapsed" onclick="set80PercentWidth()" ng-click="isCollapsed = !isCollapsed">Show Menu>></button>
+        <button class="btn btn-default" style="width: 200px; background-color: antiquewhite; border:none;" ng-show="!isCollapsed" onclick="set95PercentWidth()" ng-click="isCollapsed = !isCollapsed;"><< Hide Menu</button>
+        
+        <div style="width:100%">
+
+            <div collapse="isCollapsed" class="navbar" style="width: 200px; height:100%; vertical-align:top; margin-top:0px; margin-right:20px;background-color: antiquewhite; float:left">
+                <div style="height:1000px">
+                    <table class="table table-hover">
+                        <tr ng-repeat="menuItem in MenuItems | filter:{Module: applicationModule}">
+                            <td><a href="{{menuItem.Route}}">{{menuItem.Description}}</a></td>
+                        </tr>
+                    </table>
+                </div>
+
+            </div>
