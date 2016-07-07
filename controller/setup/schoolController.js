@@ -1,7 +1,7 @@
 "use strict";
 define(['application-configuration', 'userService', 'alertsService'], function (app) {
 
-    app.register.controller('loginController', ['$scope', '$rootScope', 'userService', 'alertsService',
+    app.register.controller('schoolController', ['$scope', '$rootScope', 'userService', 'alertsService',
         function ($scope, $rootScope, userService, alertsService) {
 
             $rootScope.closeAlert = alertsService.closeAlert;

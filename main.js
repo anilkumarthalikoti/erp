@@ -15,6 +15,8 @@ require.config({
         'blockUI': 'js/angular-block-ui',
         'ngload': 'js/ngload',
         'charts':'js/charts',
+        'jQuery':'js/jquery-1.9.1',
+        'bootstrap':'js/bootstrap',
         'mainService': 'services/mainService',
         'ajaxService': 'services/ajaxService',
         'alertsService': 'services/alertsService',
@@ -36,7 +38,9 @@ require.config({
         'angular-route': ['angular'],
         'blockUI': ['angular'],
         'angular-sanitize': ['angular'],
-        'ui-bootstrap': ['angular']
+        'ui-bootstrap': ['angular'],
+        'jQuery': ['angular'],
+        'bootstrap': ['angular']
          
     },
 
