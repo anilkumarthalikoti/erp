@@ -1,4 +1,79 @@
-<div ng-controller="schoolController">
+<div ng-controller="schoolController" ng-init="schoolDetails()">
+   <form class="form-horizontal form-css">
+<fieldset>
+
+<!-- Form Name -->
+<legend class="panel block-ui-visible">School Details</legend>
+
+<input type="hidden" ng-model="schoolId" value="-1"/>
+
+
+<!-- Appended Input-->
+<div class="form-group">
+  <label class="col-md-4 control-label" for="appendedtext">School name:</label>
+  <div class="col-md-4">
+    <div class="input-group">
+      <input id="schoolName" name="schoolName" ng-model="schoolName" class="form-control" placeholder="School name" type="text">
+      <span class="input-group-addon">*</span>
+    </div>
+   
+  </div>
+</div>
+<!-- Text input-->
+<div class="form-group">
+  <label class="col-md-4 control-label" for="appendedtext">Reg.no:</label>
+  <div class="col-md-4">
+    <div class="input-group">
+      <input id="regno" name="regno" ng-model="regno" class="form-control" placeholder="Registration no" type="text">
+      <span class="input-group-addon">*</span>
+    </div>
+   
+  </div>
+</div>
+<!-- Text input-->
+<div class="form-group">
+  <label class="col-md-4 control-label" for="officeContactNo">Office Contact No:</label>  
+  <div class="col-md-4">
+  <input id="officeContactNo" name="officeContactNo" ng-model="officeContactNo" placeholder="Office Contact no" class="form-control input-md" type="text">
     
+  </div>
+</div>
+<!-- Text input-->
+<div class="form-group">
+  <label class="col-md-4 control-label" for="faxNo">Fax :</label>  
+  <div class="col-md-4">
+  <input id="faxNo" name="faxNo" placeholder="Fax number" class="form-control input-md" type="text">
     
+  </div>
+</div>
+<!-- Textarea -->
+<div class="form-group">
+  <label class="col-md-4 control-label" for="schoolAddress">Address:</label>
+  <div class="col-md-4">                     
+    <textarea class="form-control" id="schoolAddress" name="schoolAddress"></textarea>
+  </div>
+</div>
+<!-- Text input-->
+<div class="form-group">
+  <label class="col-md-4 control-label" for="webSiteUrl">Website Url :</label>  
+  <div class="col-md-4">
+  <input id="webSiteUrl" name="webSiteUrl" placeholder="Website url" class="form-control input-md" type="text">
+    
+  </div>
+</div>
+
+<!-- Button (Double) -->
+<div class="form-group">
+  <label class="col-md-4 control-label" for="button1id">Double Button</label>
+  <div class="col-md-8">
+    <button id="button1id" name="button1id" class="btn btn-success" ng-click="saveSchoolDetails()">Save</button>
+    <button id="button2id" name="button2id" class="btn btn-danger">Cancel</button>
+  </div>
+</div>
+
+
+
+
+</fieldset>
+</form>
 </div>

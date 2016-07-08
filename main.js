@@ -23,6 +23,7 @@ require.config({
         'accountsService': 'services/accountsService',
         'dashboardService': 'services/dashboardService',
         'userService':'services/userService',
+        'schoolService':'services/setup/schoolService',
         'customersService': 'services/customersService',
         'ordersService': 'services/ordersService',
         'productsService': 'services/productsService',

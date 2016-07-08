@@ -30,19 +30,31 @@
     <div class="header" ></div>
     <div class="studentsearch" ></div>
     <div class="sidebar"  >
-        <div class="userprofile">
-            User Details
+        <div class="panel panel-default userprofile " >
+            <div class="container center-block" style="margin-left: 90px;">
+	<div class="row">
+        <div class="profile-header-container">   
+    		<div class="profile-header-img">
+                <img class="img-circle" src="//lh3.googleusercontent.com/-6V8xOA6M7BA/AAAAAAAAAAI/AAAAAAAAAAA/rzlHcD0KYwo/photo.jpg?sz=80" />
+                <!-- badge -->
+                <div class="rank-label-container">
+                    <span class="label label-default rank-label">User name</span>
+                </div>
+            </div>
+        </div> 
+	</div>
+</div>
         </div>
        
          <div class="container" style="padding:0; margin: 0;">
     <div class="row">
-        <div class="col-sm-3 col-md-3">
+        <div class="col-sm-3 col-md-3" style="width:320px;">
             <div class="panel-group" id="accordion">
                 <div class="panel panel-default" ng-repeat="(key,value) in MenuItems">
                     <!--Loop headers-->
-                    <div class="panel-heading" >
+                    <div  data-toggle="collapse" class="panel-heading accordion-toggle" data-parent="#accordion" data-target="#{{key}}"   >
                         <h4 class="panel-title">
-                            <a data-toggle="collapse" data-parent="#accordion"  href="#{{key}}"><span class="glyphicon glyphicon-folder-close">
+                            <a    href="javascript:void(0)"><span >
                             </span>{{key}}</a>
                         </h4>
                     </div>
@@ -52,7 +64,7 @@
                             <table class="table" >
                                 <tr ng-repeat=" links in value">
                                     <td>
-                                        <span class="glyphicon glyphicon-pencil text-primary"></span><a href="#{{links[0]}}">{{links[1]}}</a>
+                                        <a  href="#{{links[0]}}">{{links[1]}}</a>
                                     </td>
                                 </tr>
                                  

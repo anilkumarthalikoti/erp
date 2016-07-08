@@ -1,6 +1,4 @@
-﻿
-
-
+ 
 .validation-error {
     color: Maroon;
     font-weight: bold;   
@@ -181,4 +179,20 @@
 .panel-body { padding:0px; }
 .panel-body table tr td { padding-left: 15px }
 .panel-body .table {margin-bottom: 0px; }
+.form-css{
+    width:500px;
+}
+.form-css div.form-group{
+   margin:1px;
+}
+.form-css div.form-group input{
+  min-width:250px;
+}
+  .form-css div.form-group:nth-child(even){
+  background-color:   #f2f3f4  ;
+}
+
+ .form-css div.form-group:nth-child(odd){
+  background-color: #fbfcfc;
+}
  

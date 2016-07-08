@@ -20,7 +20,7 @@ define(['angularAMD', 'angular-route', 'ui-bootstrap', 'angular-sanitize', 'bloc
     app.config(function (blockUIConfigProvider) {
 
         // Change the default overlay message
-        blockUIConfigProvider.message("executing...");
+        blockUIConfigProvider.message("loading...");
         // Change the default delay to 100ms before the blocking is visible
         blockUIConfigProvider.delay(1);
         // Disable automatically blocking of the user interface
