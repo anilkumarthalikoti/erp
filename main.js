@@ -16,8 +16,6 @@ require.config({
         'ngload': 'js/ngload',
         'charts':'js/charts',
         'jQuery':'js/jquery-1.9.1',
-        'bootstrap':'js/bootstrap',
-        'mainService': 'services/mainService',
         'ajaxService': 'services/shared/ajaxService',
         'alertsService': 'services/shared/alertsService',
         'dataGridService': 'services/shared/dataGridService',
@@ -36,8 +34,7 @@ require.config({
         'blockUI': ['angular'],
         'angular-sanitize': ['angular'],
         'ui-bootstrap': ['angular'],
-        'jQuery': ['angular'],
-        'bootstrap': ['angular']
+        'jQuery': ['angular']
          
     },
 
