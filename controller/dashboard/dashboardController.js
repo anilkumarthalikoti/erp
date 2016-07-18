@@ -10,7 +10,7 @@ define(['application-configuration', 'dashboardService', 'alertsService'], funct
 var startWithData =1;   
             var mydata1 = {
 	labels : ["January","February","March","April","May","June","July"],
-//	labels : ["January"],
+ 
 	datasets : [
 		{
 			fillColor : "rgba(220,220,220,0.5)",
