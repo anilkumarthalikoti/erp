@@ -36,6 +36,7 @@ require.config({
         'angular-sanitize': ['angular'],
         'ui-bootstrap': ['angular'],
         'jQuery': ['angular'],
+        'charts':['angular'],
         'bootstrap': ['angular']
          
     },
