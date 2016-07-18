@@ -5,7 +5,7 @@
     <title></title>
   <script   src="js/jquery-1.9.1.js"></script> 
     <script data-main="main.js" src="js/require.js"></script>      
- 
+    <script   src="js/metisMenu.js"></script> 
     <link href="css/angular-block-ui.css" rel="stylesheet" />
     <link href="css/bootstrap.css" rel="stylesheet" />
     <link href="css/application.css" rel="stylesheet" />
@@ -31,10 +31,24 @@
         }
 
     </script>
-  
-    <div class="header" ></div>
-    <div class="studentsearch" >
-	 <div class="input-group custom-search-form">
+   <nav class="navbar navbar-default navbar-static-top" role="navigation" style="margin-bottom: 0">
+    <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand" href="index.html">ERP-School v1.0</a>
+            </div>
+			
+			
+			
+			 <div class="navbar-default sidebar" role="navigation">
+                <div class="sidebar-nav navbar-collapse">
+                    <ul class="nav" id="side-menu">
+                        <li class="sidebar-search">
+                            <div class="input-group custom-search-form">
                                 <input type="text" class="form-control" placeholder="Search...">
                                 <span class="input-group-btn">
                                 <button class="btn btn-default" type="button">
@@ -42,66 +56,23 @@
                                 </button>
                             </span>
                             </div>
-	
-	</div>
-    <div class="sidebar"  >
-        <div class="panel panel-default userprofile " >
-            <div class="container center-block" style="margin-left: 90px;">
-	<div class="row">
-        <div class="profile-header-container">   
-    		<div class="profile-header-img">
-                <img class="img-circle" src="//lh3.googleusercontent.com/-6V8xOA6M7BA/AAAAAAAAAAI/AAAAAAAAAAA/rzlHcD0KYwo/photo.jpg?sz=80" />
-                <!-- badge -->
-                <div class="rank-label-container">
-                    <span class="label label-default rank-label">User name</span>
-                </div>
-            </div>
-        </div> 
-	</div>
-</div>
-        </div>
-       
-         <div class="container" style="padding:0; margin: 0;">
-    <div class="row">
-        <div class="col-sm-3 col-md-3" style="width:270px;">
-            <div class="panel-group" id="accordion">
-                <div class="panel panel-default" ng-repeat="(key,value) in MenuItems">
-                    <!--Loop headers-->
-                    <div  data-toggle="collapse" class="panel-heading accordion-toggle" data-parent="#accordion" data-target="#{{key}}"   >
-                        <h4 class="panel-title">
-                            <a    href="javascript:void(0)"><span >
-                            </span>{{key}}</a>
-                        </h4>
-                    </div>
-                    <!-- loop sub links-->
-                    <div id="{{key}}" class="panel-collapse collapse" >
-                        <div class="panel-body">
-                            <table class="table" >
-                                <tr ng-repeat=" links in value">
-                                    <td>
-                                        <a  href="#{{links[0]}}">{{links[1]}}</a>
-                                    </td>
-                                </tr>
-                                 
-                            </table>
-                        </div>
-                    </div>
-                </div>
-               
-                 
-                 
-            </div>
-        </div>
-       
-    </div>
-</div>
-
-        <div>
-            
-            
-        </div>  
-        
-    </div>
+                            <!-- /input-group -->
+                        </li>
+						<li ng-repeat="(key,value) in MenuItems">
+						 <a href="javascript:void(0)"><i class="fa fa-wrench fa-fw"></i> {{key}}<span class="fa arrow"></span></a>
+						  <ul class="nav nav-second-level">
+						  <li ng-repeat=" links in value">
+<a  href="#{{links[0]}}">{{links[1]}}</a>
+						  </li>
+						  </ul>
+						  </li>
+						  </ul>
+						 
+						</div>
+						</div>
+			
+			</nav>
+   
     <div class="fotter panel-footer"  ><span class="right">@copyright</span></div>
  
 
