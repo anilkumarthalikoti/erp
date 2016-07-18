@@ -10,7 +10,11 @@
     <link href="css/bootstrap.css" rel="stylesheet" />
     <link href="css/application.css" rel="stylesheet" />
     <link href="css/sortableGrid.css" rel="stylesheet" />
-
+<meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="">
 </head>
 <body ng-controller="indexController" ng-init="initializeController()" style="height:100%;">
    <script language="JavaScript">
@@ -29,7 +33,17 @@
     </script>
   
     <div class="header" ></div>
-    <div class="studentsearch" ></div>
+    <div class="studentsearch" >
+	 <div class="input-group custom-search-form">
+                                <input type="text" class="form-control" placeholder="Search...">
+                                <span class="input-group-btn">
+                                <button class="btn btn-default" type="button">
+                                    <i class="fa fa-search"></i>
+                                </button>
+                            </span>
+                            </div>
+	
+	</div>
     <div class="sidebar"  >
         <div class="panel panel-default userprofile " >
             <div class="container center-block" style="margin-left: 90px;">
@@ -49,7 +63,7 @@
        
          <div class="container" style="padding:0; margin: 0;">
     <div class="row">
-        <div class="col-sm-3 col-md-3" style="width:320px;">
+        <div class="col-sm-3 col-md-3" style="width:270px;">
             <div class="panel-group" id="accordion">
                 <div class="panel panel-default" ng-repeat="(key,value) in MenuItems">
                     <!--Loop headers-->
